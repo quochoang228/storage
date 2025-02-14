@@ -1,10 +1,8 @@
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:storage/_storage.dart';
-
 /// Storage that saves data in the device's persistent memory.
+part of '../persistent_storage.dart';
 
-class PersistentStorage implements Storage {
-  const PersistentStorage({
+class SharedPreferencesStorage implements Storage {
+  const SharedPreferencesStorage({
     required SharedPreferences sharedPreferences,
   }) : _sharedPreferences = sharedPreferences;
 

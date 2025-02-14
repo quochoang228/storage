@@ -1,19 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:persistent_storage/_persistent_storage.dart';
+import 'package:persistent_storage/persistent_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:storage/_storage.dart';
 
 class MockSharedPreferences extends Mock implements SharedPreferences {}
 
 void main() {
-  late PersistentStorage persistentStorage;
+  late SharedPreferencesStorage persistentStorage;
   late MockSharedPreferences mockSharedPreferences;
 
   setUp(() {
     mockSharedPreferences = MockSharedPreferences();
     persistentStorage =
-        PersistentStorage(sharedPreferences: mockSharedPreferences);
+        SharedPreferencesStorage(sharedPreferences: mockSharedPreferences);
   });
 
   group('PersistentStorage', () {
