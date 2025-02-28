@@ -15,9 +15,15 @@ dependencies:
   mockito: ^5.0.15
 
   di:
-    path: ../../di
+    git:
+      url: https://github.com/quochoang228/di.git
+      ref: main
+      
   storage:
-    path: ../storage
+    git:
+      url: https://github.com/quochoang228/storage.git
+      path: storage
+      ref: main
 
 dev_dependencies:
   flutter_test:
